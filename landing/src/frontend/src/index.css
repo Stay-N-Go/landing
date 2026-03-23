@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* StayNGo Brand: Navy + Teal */
+    --background: 1 0 0;
+    --foreground: 0.18 0.06 264;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.06 264;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.06 264;
+
+    /* Navy primary */
+    --primary: 0.26 0.11 264;
+    --primary-foreground: 0.98 0 0;
+
+    /* Teal secondary */
+    --secondary: 0.67 0.14 168;
+    --secondary-foreground: 0.98 0 0;
+
+    --muted: 0.96 0.01 264;
+    --muted-foreground: 0.5 0.04 264;
+
+    --accent: 0.72 0.13 185;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.9 0.02 264;
+    --input: 0.9 0.02 264;
+    --ring: 0.67 0.14 168;
+
+    /* Navy dark */
+    --navy: 0.22 0.11 264;
+    /* Teal */
+    --teal: 0.67 0.14 168;
+    /* Teal bright */
+    --teal-bright: 0.72 0.13 185;
+
+    --chart-1: 0.67 0.14 168;
+    --chart-2: 0.72 0.13 185;
+    --chart-3: 0.26 0.11 264;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.26 0.11 264;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.67 0.14 168;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.32 0.1 264;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.35 0.08 264;
+    --sidebar-ring: 0.67 0.14 168;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(0.22 0.11 264) 0%,
+      oklch(0.3 0.12 230) 50%,
+      oklch(0.4 0.13 185) 100%
+    );
+  }
+
+  .gradient-features {
+    background: linear-gradient(
+      135deg,
+      oklch(0.24 0.1 264) 0%,
+      oklch(0.38 0.12 190) 100%
+    );
+  }
+
+  .gradient-teal {
+    background: linear-gradient(
+      135deg,
+      oklch(0.65 0.14 168) 0%,
+      oklch(0.72 0.13 185) 100%
+    );
+  }
+
+  .gradient-promise {
+    background: linear-gradient(
+      135deg,
+      oklch(0.97 0.02 168) 0%,
+      oklch(0.95 0.03 264) 100%
+    );
+  }
+
+  .text-gradient-teal {
+    background: linear-gradient(
+      90deg,
+      oklch(0.67 0.14 168),
+      oklch(0.72 0.13 185)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px oklch(0.22 0.11 264 / 0.15);
+  }
+}
