@@ -917,14 +917,14 @@ function Footer() {
             </span>
           </div>
           <p className="text-muted-foreground text-sm">
-            © {year} StayNGo. Built using{" "}
+            © {year} StayNGo. Built by{" "}
             <a
               href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-teal transition-colors"
             >
-              onlyhigh caffeine
+              little monster
             </a>
           </p>
         </div>
